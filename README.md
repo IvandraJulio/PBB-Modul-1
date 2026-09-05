@@ -21,6 +21,7 @@ RESTful API backend dibangun menggunakan **Node.js**, **Express.js**, dan **Supa
 ### 3. Products (`/api/products`)
 - `POST /api/products` - Tambah produk baru (`{ "sku": "PRD-002", "name": "Laptop", "description": "...", "category_id": "...", "price": 8500000, "stock": 25 }`)
 - `GET /api/products` - Ambil semua produk
+- `GET /api/products?category_id=UUID_KATEGORI` - Ambil produk berdasarkan kategori
 - `GET /api/products/:id` - Ambil produk berdasarkan ID (termasuk relasi data kategori)
 - `PUT /api/products/:id` - Update produk
 - `DELETE /api/products/:id` - Hapus produk
