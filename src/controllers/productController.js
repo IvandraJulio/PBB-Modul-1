@@ -3,7 +3,10 @@ import { ProductModel } from "../models/productModel.js";
 export const ProductController = {
   async getAll(req, res) {
     try {
-      const products = await ProductModel.getAll(req.query.category_id);
+      const products = await ProductModel.getAll(
+        req.query.category_id,
+        req.query.name
+      );
       res.json(products);
     } catch (err) {
       res.status(500).json({ error: err.message });
